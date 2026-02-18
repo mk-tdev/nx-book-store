@@ -1,10 +1,30 @@
 export default function DashboardPage() {
   // Mock data for demonstration
   const stats = [
-    { label: "Total Books", value: "1,234", icon: "📚", gradient: "from-blue-500 to-cyan-500" },
-    { label: "Categories", value: "24", icon: "📑", gradient: "from-purple-500 to-pink-500" },
-    { label: "Recent Sales", value: "89", icon: "💰", gradient: "from-orange-500 to-red-500" },
-    { label: "Active Users", value: "567", icon: "👥", gradient: "from-green-500 to-teal-500" },
+    {
+      label: "Total Books",
+      value: "1,234",
+      icon: "📚",
+      gradient: "from-blue-500 to-cyan-500",
+    },
+    {
+      label: "Categories",
+      value: "24",
+      icon: "📑",
+      gradient: "from-purple-500 to-pink-500",
+    },
+    {
+      label: "Recent Sales",
+      value: "89",
+      icon: "💰",
+      gradient: "from-orange-500 to-red-500",
+    },
+    {
+      label: "Active Users",
+      value: "567",
+      icon: "👥",
+      gradient: "from-green-500 to-teal-500",
+    },
   ];
 
   const recentBooks = [
@@ -14,7 +34,8 @@ export default function DashboardPage() {
       author: "F. Scott Fitzgerald",
       price: "$12.99",
       rating: 4.5,
-      image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&h=600&fit=crop",
     },
     {
       id: 2,
@@ -22,7 +43,8 @@ export default function DashboardPage() {
       author: "Harper Lee",
       price: "$14.99",
       rating: 4.8,
-      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop",
     },
     {
       id: 3,
@@ -30,7 +52,8 @@ export default function DashboardPage() {
       author: "George Orwell",
       price: "$11.99",
       rating: 4.7,
-      image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop",
     },
     {
       id: 4,
@@ -38,7 +61,8 @@ export default function DashboardPage() {
       author: "Jane Austen",
       price: "$10.99",
       rating: 4.6,
-      image: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400&h=600&fit=crop",
     },
     {
       id: 5,
@@ -46,7 +70,8 @@ export default function DashboardPage() {
       author: "J.D. Salinger",
       price: "$13.99",
       rating: 4.4,
-      image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=600&fit=crop",
     },
     {
       id: 6,
@@ -54,7 +79,8 @@ export default function DashboardPage() {
       author: "J.K. Rowling",
       price: "$15.99",
       rating: 4.9,
-      image: "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?w=400&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?w=400&h=600&fit=crop",
     },
   ];
 
@@ -67,7 +93,8 @@ export default function DashboardPage() {
             Dashboard
           </h1>
           <p className="text-gray-600 dark:text-gray-300">
-            Welcome back! Here's what's happening with your book store today.
+            Welcome back! Here&apos;s what&apos;s happening with your book store
+            today.
           </p>
         </div>
 
@@ -78,7 +105,9 @@ export default function DashboardPage() {
               key={index}
               className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-90`} />
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-90`}
+              />
               <div className="relative p-6 text-white">
                 <div className="text-4xl mb-2">{stat.icon}</div>
                 <div className="text-3xl font-bold mb-1">{stat.value}</div>

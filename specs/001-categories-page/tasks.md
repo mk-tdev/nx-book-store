@@ -1,5 +1,4 @@
 ---
-
 description: "Tasks for Categories Page implementation"
 ---
 
@@ -28,11 +27,11 @@ description: "Tasks for Categories Page implementation"
 
 **Purpose**: Establish the baseline structure and shared utilities for the feature
 
-- [ ] T001 Create route folder `app/categories/`
-- [ ] T002 [P] Create mock data module `app/data/mockCategories.ts`
-- [ ] T003 [P] Create shared breadcrumb component `app/components/Breadcrumbs.tsx`
-- [ ] T004 [P] Create shared category card component `app/components/CategoryCard.tsx`
-- [ ] T005 [P] Create shared grid component `app/components/CategoryGrid.tsx`
+- [x] T001 Create route folder `app/categories/`
+- [x] T002 [P] Create mock data module `app/data/mockCategories.ts`
+- [x] T003 [P] Create shared breadcrumb component `app/components/Breadcrumbs.tsx`
+- [x] T004 [P] Create shared category card component `app/components/CategoryCard.tsx`
+- [x] T005 [P] Create shared grid component `app/components/CategoryGrid.tsx`
 
 ---
 
@@ -42,11 +41,11 @@ description: "Tasks for Categories Page implementation"
 
 **⚠️ CRITICAL**: No user story work can be considered complete until this phase is complete
 
-- [ ] T006 Implement curated category list + theme tokens in `app/data/mockCategories.ts`
-- [ ] T007 Implement logic to hide categories with `bookCount === 0` in `app/components/CategoryGrid.tsx`
-- [ ] T008 Implement a deterministic bestsellers selection helper (top 3 per category) in `app/data/mockCategories.ts`
-- [ ] T009 Define a minimal data shape for preview items (id + title, optional extra fields) in `app/data/mockCategories.ts`
-- [ ] T010 Add manual validation notes to `specs/001-categories-page/quickstart.md` if any steps changed during implementation
+- [x] T006 Implement curated category list + theme tokens in `app/data/mockCategories.ts`
+- [x] T007 Implement logic to hide categories with `bookCount === 0` in `app/components/CategoryGrid.tsx`
+- [x] T008 Implement a deterministic bestsellers selection helper (top 3 per category) in `app/data/mockCategories.ts`
+- [x] T009 Define a minimal data shape for preview items (id + title, optional extra fields) in `app/data/mockCategories.ts`
+- [x] T010 Add manual validation notes to `specs/001-categories-page/quickstart.md` if any steps changed during implementation
 
 **Checkpoint**: Foundation ready - user story implementation can now proceed
 
@@ -60,12 +59,12 @@ description: "Tasks for Categories Page implementation"
 
 ### Implementation for User Story 1
 
-- [ ] T011 [US1] Implement Categories page shell in `app/categories/page.tsx` (hero section + container layout)
-- [ ] T012 [US1] Wire breadcrumb into `app/categories/page.tsx` using `app/components/Breadcrumbs.tsx`
-- [ ] T013 [US1] Render category grid in `app/categories/page.tsx` using `app/components/CategoryGrid.tsx`
-- [ ] T014 [P] [US1] Add empty/error UI states for missing category data in `app/categories/page.tsx`
-- [ ] T015 [US1] Ensure each card renders name/icon/count in `app/components/CategoryCard.tsx`
-- [ ] T016 [US1] Apply distinct visual theme per category in `app/components/CategoryCard.tsx`
+- [x] T011 [US1] Implement Categories page shell in `app/categories/page.tsx` (hero section + container layout)
+- [x] T012 [US1] Wire breadcrumb into `app/categories/page.tsx` using `app/components/Breadcrumbs.tsx`
+- [x] T013 [US1] Render category grid in `app/categories/page.tsx` using `app/components/CategoryGrid.tsx`
+- [x] T014 [P] [US1] Add empty/error UI states for missing category data in `app/categories/page.tsx`
+- [x] T015 [US1] Ensure each card renders name/icon/count in `app/components/CategoryCard.tsx`
+- [x] T016 [US1] Apply distinct visual theme per category in `app/components/CategoryCard.tsx`
 
 **Checkpoint**: User Story 1 is fully functional and manually verifiable
 
@@ -82,12 +81,12 @@ description: "Tasks for Categories Page implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T017 [US2] Add preview container UI to `app/components/CategoryCard.tsx` (hidden by default)
-- [ ] T018 [US2] Implement desktop hover behavior in `app/components/CategoryCard.tsx`
-- [ ] T019 [US2] Implement touch tap-to-toggle behavior in `app/components/CategoryCard.tsx`
-- [ ] T020 [US2] Ensure preview shows up to 3 bestseller books per category in `app/components/CategoryCard.tsx`
-- [ ] T021 [US2] Ensure categories with fewer than 3 books show only available books in `app/components/CategoryCard.tsx`
-- [ ] T022 [US2] Ensure preview does not break layout on small screens in `app/components/CategoryCard.tsx`
+- [x] T017 [US2] Add preview container UI to `app/components/CategoryCard.tsx` (hidden by default)
+- [x] T018 [US2] Implement desktop hover behavior in `app/components/CategoryCard.tsx`
+- [x] T019 [US2] Implement touch tap-to-toggle behavior in `app/components/CategoryCard.tsx`
+- [x] T020 [US2] Ensure preview shows up to 3 bestseller books per category in `app/components/CategoryCard.tsx`
+- [x] T021 [US2] Ensure categories with fewer than 3 books show only available books in `app/components/CategoryCard.tsx`
+- [x] T022 [US2] Ensure preview does not break layout on small screens in `app/components/CategoryCard.tsx`
 
 **Checkpoint**: User Stories 1 and 2 are both manually verifiable
 
@@ -101,10 +100,10 @@ description: "Tasks for Categories Page implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T023 [US3] Determine existing Books listing route and how category filter is expressed (URL param or query) by inspecting `app/` routes
-- [ ] T024 [US3] Implement navigation action in `app/components/CategoryCard.tsx` that routes to Books listing with category filter applied
-- [ ] T025 [US3] Ensure navigation is a separate, clear action on touch devices (not the same tap as preview toggle) in `app/components/CategoryCard.tsx`
-- [ ] T026 [US3] Ensure navigation is not available for hidden 0-book categories (no card rendered) via `app/components/CategoryGrid.tsx`
+- [x] T023 [US3] Determine existing Books listing route and how category filter is expressed (URL param or query) by inspecting `app/` routes
+- [x] T024 [US3] Implement navigation action in `app/components/CategoryCard.tsx` that routes to Books listing with category filter applied
+- [x] T025 [US3] Ensure navigation is a separate, clear action on touch devices (not the same tap as preview toggle) in `app/components/CategoryCard.tsx`
+- [x] T026 [US3] Ensure navigation is not available for hidden 0-book categories (no card rendered) via `app/components/CategoryGrid.tsx`
 
 **Checkpoint**: All user stories are independently functional and manually verifiable
 
@@ -114,10 +113,10 @@ description: "Tasks for Categories Page implementation"
 
 **Purpose**: Cleanup and UX refinement across all stories
 
-- [ ] T027 [P] Run through manual validation checklist in `specs/001-categories-page/quickstart.md` and update if needed
-- [ ] T028 Tighten responsive spacing/typography for hero + grid in `app/categories/page.tsx`
-- [ ] T029 Add basic accessibility improvements (semantic HTML, focus styles for navigation action) in `app/components/Breadcrumbs.tsx` and `app/components/CategoryCard.tsx`
-- [ ] T030 Code cleanup and refactoring (keep components dumb/reusable) across `app/components/`
+- [x] T027 [P] Run through manual validation checklist in `specs/001-categories-page/quickstart.md` and update if needed
+- [x] T028 Tighten responsive spacing/typography for hero + grid in `app/categories/page.tsx`
+- [x] T029 Add basic accessibility improvements (semantic HTML, focus styles for navigation action) in `app/components/Breadcrumbs.tsx` and `app/components/CategoryCard.tsx`
+- [x] T030 Code cleanup and refactoring (keep components dumb/reusable) across `app/components/`
 
 ---
 
