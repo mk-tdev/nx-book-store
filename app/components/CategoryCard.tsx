@@ -1,22 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 
 import type { Category } from "../data/mockCategories";
 
 export default function CategoryCard({ category }: { category: Category }) {
-  const [previewOpen, setPreviewOpen] = useState(false);
-  const [canHover, setCanHover] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia("(hover: hover) and (pointer: fine)");
-    const update = () => setCanHover(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, []);
-
   const themeClasses = useMemo(() => {
     switch (category.theme) {
       case "purple":
@@ -40,17 +29,6 @@ export default function CategoryCard({ category }: { category: Category }) {
   return (
     <div
       className={`group relative rounded-2xl border bg-linear-to-br ${themeClasses} p-5 shadow-sm hover:shadow-md transition-shadow`}
-      onMouseEnter={() => {
-        if (canHover) setPreviewOpen(true);
-      }}
-      onMouseLeave={() => {
-        if (canHover) setPreviewOpen(false);
-      }}
-      onClick={() => {
-        if (!canHover) {
-          setPreviewOpen((v) => !v);
-        }
-      }}
     >
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
@@ -58,7 +36,7 @@ export default function CategoryCard({ category }: { category: Category }) {
             <span className="text-2xl" aria-hidden="true">
               {category.icon}
             </span>
-            <h3 className="font-semibold text-gray-900 truncate">
+            <h3 className="font-semibold text-white truncate">
               {category.name}
             </h3>
           </div>
@@ -76,11 +54,7 @@ export default function CategoryCard({ category }: { category: Category }) {
         </Link>
       </div>
 
-      <div
-        className={`mt-4 rounded-xl bg-white/70 p-3 text-sm text-gray-800 transition-opacity ${
-          previewOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-      >
+      <div className="mt-4 rounded-xl bg-white/70 p-3 text-sm text-gray-800">
         <div className="font-semibold">Top books</div>
 
         {topBooks.length === 0 ? (
